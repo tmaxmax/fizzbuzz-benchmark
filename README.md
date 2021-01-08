@@ -1,6 +1,6 @@
-# FizzBuzz C++ and Rust benchmark
+# FizzBuzz C++, Rust and Go benchmark
 
-The code in this repository implements simple benchmarks for FizzBuzz implementations in C++ and Rust
+The code in this repository implements simple benchmarks for FizzBuzz implementations in C++, Rust and Go
 
 ## Implementation of FizzBuzz
 
@@ -12,7 +12,7 @@ The benchmarking framework runs the function with random integers as input multi
 
 ## Running the benchmarks
 
-You need to have nightly rustc, make, cmake, and a C/C++ compiler with C++20 support installed on your machine to run the benchmarks.
+You need to have nightly rustc, make, cmake, go, and a C/C++ compiler with C++20 support installed on your machine to run the benchmarks.
 
 To install nightly rustc (considering you have rustup installed):
 
@@ -38,4 +38,10 @@ To run the Rust benchmark
 
 ```bash
 $ make rs
+```
+
+To run the Go benchmark
+
+```bash
+$ make go
 ```

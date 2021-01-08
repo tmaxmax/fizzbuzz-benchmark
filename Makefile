@@ -15,4 +15,7 @@ cxx:
 rs:
 		cd rust && cargo +nightly bench
 
-.PHONY: all build clean cxx rs
+go:
+		cd go && go test -bench=.
+
+.PHONY: all build clean cxx go rs
