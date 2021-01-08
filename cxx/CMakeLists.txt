@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.13)
+project(cmake_testapp)
+set(CMAKE_CXX_STANDARD 20)
+add_executable(cxx main.cxx)
+target_include_directories(cxx PRIVATE include)
+find_package(benchmark REQUIRED)
+target_link_libraries(cxx benchmark::benchmark)
