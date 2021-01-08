@@ -12,23 +12,23 @@ The benchmarking framework runs the function with a random integer as input mult
 
 ## Running the benchmarks
 
-You need to have rustup, cmake, and a C/C++ compiler installed on your machine to run the benchmarks.
+You need to have nightly rustc, make, cmake, and a C/C++ compiler installed on your machine to run the benchmarks.
 
 To run the C++ benchmarks
 
 ```bash
 $ make all # first run
-$ # make build on code changes
+$ # "make build" on code changes
 $ make cxx
 ```
 
-You can also choose the compiler for C++ by passing the required environment variable:
+You can also choose the compiler for C++ by passing the required environment variables:
 
 ```bash
 $ CC=clang CXX=clang++ make build
 ```
 
-To run the Rust benchmark (make sure to have Rust Nightly installed)
+To run the Rust benchmark
 
 ```bash
 $ make rs
