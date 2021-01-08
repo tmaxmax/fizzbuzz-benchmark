@@ -6,15 +6,14 @@
 #include <random>
 #include <string>
 
-auto fizzbuzz_runner = [](benchmark::State &st, auto gen) {
+auto fizzbuzz_runner = [](benchmark::State &st) {
   for (auto _ : st) {
-    auto res = fizzbuzz(gen());
+    fizzbuzz(gen());
   }
 };
 
 int main(int argc, char **argv) {
-  benchmark::RegisterBenchmark("fizzbuzz", fizzbuzz_runner,
-                               std::mt19937{std::random_device{}()});
+  benchmark::RegisterBenchmark("fizzbuzz", fizzbuzz_runner);
   benchmark::Initialize(&argc, argv);
   benchmark::RunSpecifiedBenchmarks();
 }

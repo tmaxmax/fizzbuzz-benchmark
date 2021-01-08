@@ -2,6 +2,7 @@
 #define FIZZBUZZ_H_
 
 #include <cstdint>
+#include <random>
 #include <string>
 
 auto fizzbuzz(std::uint64_t num) -> std::string {
@@ -18,6 +19,13 @@ auto fizzbuzz(std::uint64_t num) -> std::string {
   }
 
   return res;
+}
+
+auto gen() -> std::uint64_t {
+  static std::mt19937_64 gen{std::random_device{}()};
+  static std::uniform_int_distribution<std::uint64_t> dist;
+
+  return dist(gen);
 }
 
 #endif
