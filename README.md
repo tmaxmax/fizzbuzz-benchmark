@@ -8,11 +8,17 @@ A function named `fizzbuzz` receives as parameter a 64-bit unsigned integer, and
 
 ## Benchmarking methodology
 
-The benchmarking framework runs the function with a random integer as input multiple times, computing the time taken for the function's execution.
+The benchmarking framework runs the function with random integers as input multiple times, computing the time taken for the function to execute.
 
 ## Running the benchmarks
 
-You need to have nightly rustc, make, cmake, and a C/C++ compiler installed on your machine to run the benchmarks.
+You need to have nightly rustc, make, cmake, and a C/C++ compiler with C++20 support installed on your machine to run the benchmarks.
+
+To install nightly rustc (considering you have rustup installed):
+
+```bash
+$ rustup toolchain install nightly
+```
 
 To run the C++ benchmarks
 
