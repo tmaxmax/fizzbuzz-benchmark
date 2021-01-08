@@ -4,16 +4,14 @@
 #include <cstdint>
 #include <string>
 
-auto fizzbuzz(int num) -> std::string {
-  static const std::string fizz{"fizz"}, buzz{"buzz"};
-
+auto fizzbuzz(std::uint64_t num) -> std::string {
   std::string res;
 
   if (num % 3 == 0) {
-    res += fizz;
+    res += "Fizz";
   }
   if (num % 5 == 0) {
-    res += buzz;
+    res += "Buzz";
   }
   if (res.empty()) {
     res += std::to_string(num);
